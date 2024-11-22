@@ -1,21 +1,19 @@
-
 def calcular_nivel(vitorias, derrotas):
     saldoVitorias = vitorias - derrotas  
 
-    
-    if vitorias < 10:
+    if saldoVitorias < 10:
         nivel = "Ferro"
-    elif 11 <= vitorias <= 20:
+    elif 11 <= saldoVitorias <= 20:
         nivel = "Bronze"
-    elif 21 <= vitorias <= 50:
+    elif 21 <= saldoVitorias <= 50:
         nivel = "Prata"
-    elif 51 <= vitorias <= 80:
+    elif 51 <= saldoVitorias <= 80:
         nivel = "Ouro"
-    elif 81 <= vitorias <= 90:
+    elif 81 <= saldoVitorias <= 90:
         nivel = "Diamante"
-    elif 91 <= vitorias <= 100:
+    elif 91 <= saldoVitorias <= 100:
         nivel = "Lendário"
-    elif vitorias >= 101:
+    elif saldoVitorias >= 101:
         nivel = "Imortal"
     else:
         nivel = None  
@@ -29,7 +27,6 @@ def obter_valores_validos():
             vitorias = int(input("Digite a quantidade de vitórias: "))
             derrotas = int(input("Digite a quantidade de derrotas: "))
 
-            
             saldoVitorias, nivel = calcular_nivel(vitorias, derrotas)
 
             if nivel is None:
@@ -42,4 +39,4 @@ def obter_valores_validos():
 
 
 saldoVitorias, nivel = obter_valores_validos()
-print(f"O Herói tem de saldo de {saldoVitorias} está no nível de {nivel}")
+print(f"O Herói tem um saldo de {saldoVitorias} e está no nível {nivel}.")
